@@ -59,10 +59,6 @@ function Hero() {
           </a>
         </div>
 
-        <p className="mt-10 font-body text-sm text-white/80">
-          Projects Completed: <span className="font-semibold text-[#ff5757]">20+</span>
-        </p>
-
         <a href="#services" className="mt-10 text-3xl text-white animate-bounce">
           ↓
         </a>

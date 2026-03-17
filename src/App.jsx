@@ -1,5 +1,6 @@
 import { motion as Motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import logo from './assets/logo.png'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
@@ -8,7 +9,6 @@ import Navbar from './components/Navbar'
 import Portfolio from './components/Portfolio'
 import Pricing from './components/Pricing'
 import Services from './components/Services'
-import Testimonials from './components/Testimonials'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -17,6 +17,13 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 900)
     return () => clearTimeout(timer)
+  }, [])
+
+  useEffect(() => {
+    const existing = document.querySelector("link[rel='icon']")
+    if (existing) {
+      existing.href = logo
+    }
   }, [])
 
   if (loading) {
@@ -43,7 +50,6 @@ function App() {
         <Services />
         <Portfolio />
         <HowItWorks />
-        <Testimonials />
         <Pricing />
         <Contact />
       </main>

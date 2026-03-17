@@ -1,5 +1,6 @@
 import { motion as Motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import logo from '../assets/logo.png'
 
 const navItems = [
   { label: 'Home', href: '#home' },
@@ -26,8 +27,9 @@ function Navbar() {
           scrolled ? 'bg-black/92 shadow-xl backdrop-blur' : 'bg-transparent'
         }`}
       >
-        <a href="#home" className="font-display text-xl font-extrabold text-white">
-          ShopOwnerSoftware
+        <a href="#home" className="flex items-center gap-2">
+          <img src={logo} alt="ShopOwnerSoftware logo" className="h-8 w-8 rounded-md object-cover" />
+          <span className="font-display text-xl font-extrabold text-white">ShopOwnerSoftware</span>
         </a>
         <ul className="hidden items-center gap-7 md:flex">
           {navItems.map((item) => (
@@ -44,6 +46,14 @@ function Navbar() {
             className="hidden min-h-[44px] items-center rounded-lg bg-[#ff5757] px-4 py-2 font-body text-sm font-semibold text-white md:inline-flex"
           >
             Let&apos;s Talk
+          </a>
+          <a
+            href="https://www.instagram.com/shopownersoftware/"
+            target="_blank"
+            rel="noreferrer"
+            className="hidden min-h-[44px] items-center rounded-lg border border-[#ff5757] px-4 py-2 font-body text-sm font-semibold text-[#ff5757] md:inline-flex"
+          >
+            Insta
           </a>
           <button
             type="button"
@@ -82,6 +92,16 @@ function Navbar() {
               className="block min-h-[44px] rounded-md bg-[#ff5757] px-3 py-3 font-body font-semibold text-white"
             >
               Let&apos;s Talk
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/shopownersoftware/"
+              target="_blank"
+              rel="noreferrer"
+              className="block min-h-[44px] rounded-md border border-[#ff5757] px-3 py-3 font-body font-semibold text-[#ff5757]"
+            >
+              Instagram
             </a>
           </li>
         </ul>

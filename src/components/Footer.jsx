@@ -1,3 +1,5 @@
+import logo from '../assets/logo.png'
+
 function Footer() {
   const year = new Date().getFullYear()
 
@@ -5,7 +7,10 @@ function Footer() {
     <footer className="border-t border-white/10 bg-[#070707] px-4 py-10 md:px-8">
       <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-4">
         <div>
-          <p className="font-display text-2xl font-bold text-white">ShopOwnerSoftware</p>
+          <div className="flex items-center gap-2">
+            <img src={logo} alt="ShopOwnerSoftware logo" className="h-10 w-10 rounded-md object-cover" />
+            <p className="font-display text-2xl font-bold text-white">ShopOwnerSoftware</p>
+          </div>
         </div>
         <div>
           <p className="font-body text-sm uppercase tracking-[0.1em] text-[#ff5757]">Quick Links</p>
